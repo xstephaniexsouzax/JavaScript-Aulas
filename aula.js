@@ -2,7 +2,7 @@
 voce tera 3 variaveis. sendo elas :
 1 - Preco do combustivel ;
 2 - Gasto medio de combustivel do carro por km
-3- Distancia em km da viagem ; 
+3 - Distancia em km da viagem ; 
 
 const precoCombustivel = 5.79;  preco do combustivel
 const kmPorLitros = 12;  a cada 10km percorridos  se gasta 1 litros
@@ -63,8 +63,6 @@ if (tipoCombustivel === 'Gasolina') {
     console.log(GastoMedio.toFixed(2));     
 }
 
-
-
 Faca um algoritmo que dado as 3 notas por um aluno em um semestre da faculdade calcule e imprima a media e a sua classificacao
 conforme a tabela abaixo.
 
@@ -73,7 +71,6 @@ classificacao
 - Media menor que 5, reprovacao ;
 - Media entre 5 e 7 recuperacao;
 - Media acima de 7, passou de semestre;
-
 
 const nota1= 10
 const nota2= 5
@@ -88,7 +85,6 @@ if (media>7) {
     console.log('Ops.. Nao foi dessa vez. Mas continue estudando. Voce ainda tem chances (recuperacao)')
 }
 
-
 Formula do IMC = peso (altura*altura)
 Elabore um algoritmo que dado o peso e a altura de um adulto mostre sua condicao de acordo com a tabela abaixo:
 
@@ -98,7 +94,6 @@ IMC em adultos Condicao:
 - Entre de 25 e 30 Acima do peso;
 - Entre de 30 e 50 Obeso;
 - Acima de 40 Obesidade Grave.
-
 
 const peso = 70;
 const altura= 1.5;
@@ -118,7 +113,6 @@ if (imc<18.5) {
 
 console.log(imc.toFixed(2));
 
-
 Elabore um algoritmo que calcule o que deve ser pago  por um produto, considerando o preso normal de etiqueta e a escolha 
 da condicao de pagamento. Utilizr os codigos da tabela a seguir para ler qual a condicao de pagamento e efetuar o calculo 
 adequado:
@@ -128,7 +122,6 @@ Codigo de Condicao de pagamento:
 2 - A vista no Dinheiro ou no PIX, recebe 15% de desconto;
 3 - Em duas vezes, preco normal de etiqueta sem juros;
 4 - Acima de duas vezes preco normal de etiqueta mais juros de 10%;
-
 
 const valor= 200;
 const desconto10= (valor * 10)/100;
@@ -150,4 +143,79 @@ if(tipoDePagamento === 1) {
     console.log(pagamentoComJuros);
 }
 
+----- Funcoes ------ 
+Exemplos:
+
+function escrevaMeuNome(nome) {
+    console.log('Meu nome e :' +nome);
+}
+
+escrevaMeuNome('Stephanie');
+
+function quadrado(valor) {
+    return valor * valor;
+}
+
+const quadradoDeDez= quadrado(10);
+console.log(quadradoDeDez);
+
+----- Transformando exercicico em funcao -----
+
+Calculo do IMC: 
+
+function calcularImc(peso, altura) {
+    return peso / (altura * altura);
+}
+
+function classificarImc(imc) {
+    if (imc < 18.5) {
+        return 'Abaixo do peso';
+    } else if (imc >= 18.5 && imc < 25) {
+        return 'Peso normal';
+    } else if (imc >= 25 && imc < 30) {
+        return 'Acima do peso';
+    } else if (imc >= 30 && imc < 50) {
+        return 'Obeso';
+    } else {
+        return 'Obesidade Grave';
+    }
+}
+
+(function main() {
+    const peso = 40;
+    const altura = 1.5;
+    
+    const imc = calcularImc(peso, altura);
+    console.log(classificarImc(imc));
+}) ();
+
+Calculo do desconto/juros:
+
+Codigo de Condicao de pagamento:
+1 - A vista Debito, recebe 10% de desconto;
+2 - A vista no Dinheiro ou no PIX, recebe 15% de desconto;
+3 - Em duas vezes, preco normal de etiqueta sem juros;
+4 - Acima de duas vezes preco normal de etiqueta mais juros de 10%;
+
 */
+function aplicarDesconto(valor, desconto) {
+    return valor - ((valor * desconto) / 100);
+}
+function aplicarJuros(valor, juros) {
+    return valor + ((valor * juros) / 100);
+}
+
+
+const precoEtiqueta = 100;
+const tipoDePagamento = 4;
+
+if (tipoDePagamento === 1) {
+    console.log(aplicarDesconto(precoEtiqueta, 10));
+} else if (tipoDePagamento === 2) {
+    console.log(aplicarDesconto(precoEtiqueta, 15));
+} else if (tipoDePagamento === 3) {
+    console.log(precoEtiqueta);
+} else {
+    console.log(aplicarJuros(precoEtiqueta, 10));
+}
+
