@@ -161,6 +161,62 @@ console.log(quadradoDeDez);
 
 ----- Transformando exercicico em funcao -----
 
+1)Faca um programa para calcular o valor de uma viagem.
+
+Voce tera 5 variaveis. Sendo elas :
+
+1 - Preco do etanol ;  
+2 - Preco do gasolina ;
+3 - O tipo de combustivel que esta no seu carro;
+4 - Gasto medio de combustivel do carro por km;
+5 - Distancia em km da viagem ; 
+
+Imprima no console o valor que sera gasto para realizar esta viagem.
+
+function calcularGasto (preco, distancia, litros) {
+    return preco * (distancia/litros);
+}
+
+const precoDoEtanol = 2.47;
+const precoDaGasolina = 5.25;
+const KmPorLitro = 15;
+const distanciaEmKM= 200;
+const tipoCombustivel= 'Gasolina'
+
+if (tipoCombustivel === 'Gasolina') {
+    console.log(calcularGasto(precoDaGasolina, distanciaEmKM, KmPorLitro)); 
+} else {
+    console.log(calcularGasto(precoDoEtanol, distanciaEmKM, KmPorLitro));  
+}
+
+Calculo das notas de alunos(as):
+
+Faca um algoritmo que dado as 3 notas por um aluno em um semestre da faculdade calcule e imprima a media e a sua classificacao
+conforme a tabela abaixo.
+
+media = (nota1 + nota2 + nota 3 )/3
+classificacao 
+- Media menor que 5, reprovacao ;
+- Media entre 5 e 7 recuperacao;
+- Media acima de 7, passou de semestre;
+
+function calcularMediaDosAlunos(notaA, notaB, notaC){
+        return (notaA+notaB+notaC) / 3
+
+}
+
+const nota1= 2
+const nota2= 5
+const nota3= 3
+
+if (calcularMediaDosAlunos(nota1, nota2, nota3) > 7) {
+    console.log('Parabens! Voce passou de semestre! (aprovacao)')
+} else if (calcularMediaDosAlunos(nota1, nota2, nota3) < 5)  {
+    console.log('Que pena!Vamos nos ver denovo no proximo semestre... (reprovacao)')
+} else if(calcularMediaDosAlunos(nota1, nota2, nota3) <= 7) {
+    console.log('Ops.. Nao foi dessa vez. Mas continue estudando. Voce ainda tem chances (recuperacao)')
+}
+
 Calculo do IMC: 
 
 function calcularImc(peso, altura) {
@@ -197,14 +253,12 @@ Codigo de Condicao de pagamento:
 3 - Em duas vezes, preco normal de etiqueta sem juros;
 4 - Acima de duas vezes preco normal de etiqueta mais juros de 10%;
 
-*/
 function aplicarDesconto(valor, desconto) {
     return valor - ((valor * desconto) / 100);
 }
 function aplicarJuros(valor, juros) {
     return valor + ((valor * juros) / 100);
 }
-
 
 const precoEtiqueta = 100;
 const tipoDePagamento = 4;
@@ -219,3 +273,4 @@ if (tipoDePagamento === 1) {
     console.log(aplicarJuros(precoEtiqueta, 10));
 }
 
+*/
