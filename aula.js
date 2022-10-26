@@ -447,7 +447,6 @@ console.log(marcos.classificacaoImc());
 
 Arrays e Estrutura de Repetição em JavaScript 
 
-
 const notas = [];
 
 notas.push(10);
@@ -486,5 +485,52 @@ for (let i = 0; i < numeros.length; i++) {
        console.log(numero);
     } 
 }
-*/
+3) Faça um programa que dado uma lista de nomes imprima os nomes que começem com a letra "V".
 
+const nomes =['vania', 'vanusa','gabriela','vanessa', 'stephanie'];
+
+for (let i = 0; i < nomes.length; i++) {
+    const nome = nomes[i];
+    if (nome[0] == 'v' ) {
+        console.log(nome);
+    }  
+}
+
+4) Faça um programa que preencha uma lista com todos os números pares contidos no intervalo de 10 a 50;
+
+const numeros = [10, 11, 12, 13, 15, 14, 16, 17, 18, 19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,38,39,
+40,41,42,43,44,45,46,47,48,49,50];
+
+for (let i = 0; i < numeros.length; i++) {
+    const numero = numeros[i];
+    if (numero % 2 == 0) {
+        console.log(numero);
+    }
+}
+5) Dado uma lista com as médias tiradas pelos alunos. Imprima todas as médias que ficaram de recuperação (média < 5).
+   Ex de lista = [2, 7, 3, 8, 10, 4] 
+
+const notas = [2, 7, 3, 8, 10, 4, 1];
+
+for (let i = 0; i < notas.length; i++) {
+    const nota = notas[i];
+    if (nota < 5) {
+        console.log(nota);
+    }
+}
+6) Dado uma lista com as notas tiradas pelos alunos. imprima a maior nota.
+   Ex de lista de notas = [2, 7, 3, 8, 10, 4]
+
+const notas = [2, 7, 3, 8, 10, 4, 1];
+let maiorNumero = 0;
+
+
+for (let i = 0; i < notas.length; i++) {
+    const nota = notas[i];
+    if (nota > maiorNumero) {
+        maiorNumero = nota;
+    }
+}
+
+console.log(maiorNumero);
+*/
