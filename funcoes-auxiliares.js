@@ -1,7 +1,6 @@
 
-const entradas = [5, 50, 10, 98, 23];
+const entradas = [6];
 let i= 0;
-
 
 
 function gets() {
@@ -15,3 +14,4 @@ function print(texto) {
 }
 
 module.exports = { gets, print };
+
