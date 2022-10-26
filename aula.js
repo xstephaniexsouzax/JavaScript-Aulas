@@ -445,4 +445,46 @@ console.log(jose.classificacaoImc());
 const marcos = new Pessoa ('marcos', 60, 1.85);
 console.log(marcos.classificacaoImc());
 
+Arrays e Estrutura de Repetição em JavaScript 
+
+
+const notas = [];
+
+notas.push(10);
+notas.push(7);
+notas.push(3);
+notas.push(5);
+notas.push(7);
+
+let soma = 0;
+
+for (let i = 0; i < notas.length; i++) {
+    const nota = notas[i];
+    soma = soma + nota; 
+    
+}
+
+const media= soma / notas.length; 
+console.log(media);
+
+---- Exercicio ---- 
+1) Crie um programa que dado um numero imprima a sua tabuada
+
+const tabuada = [5]; 
+
+for (let t = 1; t <= 10; t++) {
+    console.log(t * tabuada); 
+}
+
+2) Crie um programa que seja capaz de percorrer uma lista de números e imprima cada número Par encontrado. 
+
+const numeros=[25,4,3,2,5];
+
+for (let i = 0; i < numeros.length; i++) {
+    const numero = numeros[i];
+    if (numero % 2 == 0) {
+       console.log(numero);
+    } 
+}
 */
+
