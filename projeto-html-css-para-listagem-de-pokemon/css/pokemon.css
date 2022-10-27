@@ -1,0 +1,82 @@
+.pokemons{
+    border-radius: 1rem;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid; /* lista fica em colunas uma do lado da outra*/
+    grid-template-columns: 1fr 1fr; /* deixar a lista uma do lado da outra */
+}
+
+.pokemon{
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: #14a06f;
+    color: #fff;
+    border-radius: 1rem;
+   /* o elemento não se comporta mais como bloco, mas só ocupa o seu espaço*/
+    flex-direction: column ;
+    display: flex;  /* Os itens do flexbox são ordenados da mesma forma que a direção do texto , ao longo do eixo cruzado .*/
+    border-style: none;  
+
+
+}
+.pokemon .nome{
+    color: #fff;
+    margin-bottom: 0;
+
+}
+
+.numero {
+    color: #000;
+    opacity: 0.3;
+    text-align: right;
+    font-size: 0.625rem;
+}
+
+
+.pokemon .detalhes {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detalhes .tipos{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detalhes .tipos li {
+    background-color: #61e1c6;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+    font-size:  0.625rem;
+    border-radius: 1rem;
+    
+}
+
+img{
+    max-width: 90%;
+    height: 70px;
+ 
+}
+
+@media screen and (min-width: 380px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .pokemons {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
