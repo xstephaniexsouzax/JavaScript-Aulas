@@ -1,5 +1,5 @@
 
-const entradas = [6];
+const entradas = [6,5,1,10,7,4];
 let i= 0;
 
 
